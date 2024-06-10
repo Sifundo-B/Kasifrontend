@@ -1,1 +1,6 @@
-<p>bet-slip works!</p>
+<div *ngFor="let bet of betSlip">
+    <h3>{{ bet.event.name }}</h3>
+    <p>Odds: {{ bet.odds }}</p>
+    <button (click)="removeFromBetSlip(bet)">Remove</button>
+  </div>
+  

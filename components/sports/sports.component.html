@@ -1,1 +1,15 @@
-<p>sports works!</p>
+<div *ngFor="let sport of sports">
+  <h2>{{ sport.name }}</h2>
+  <div *ngFor="let event of sport.events">
+    <h3>{{ event.name }}</h3>
+    <button (click)="addToBetSlip(event)">Bet</button>
+  </div>
+</div>
+
+<!-- Bet slip section -->
+<div class="bet-slip">
+  <h2>Bet Slip</h2>
+  <div *ngFor="let bet of betSlip">
+    <p>{{ bet.name }}</p>
+  </div>
+</div>

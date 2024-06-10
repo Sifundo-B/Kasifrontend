@@ -1,1 +1,7 @@
-<p>user-profile works!</p>
+<h2>{{ user.name }}</h2>
+<p>Email: {{ user.email }}</p>
+
+<h3>Betting History</h3>
+<div *ngFor="let bet of user.bettingHistory">
+  <p>{{ bet.event.name }} - {{ bet.status }}</p>
+</div>
